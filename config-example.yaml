@@ -1,0 +1,13 @@
+# Calendar ICS URL's and the OpenWeather API key should remain
+# secret, so should not be checked into git.
+
+calendars:
+- url: https://127.0.0.1/calendar.ics # Fetch ICS URL from your calendar service and put it here
+  name: personal                      # Some name to identify calendar
+  icon: !!binary "74u1"               # FontAwesome character used as icon for events
+  trimPrefix: ''                      # Trim this prefix from every event title
+openWeather:
+  apiKey: yourOpenWeatherAPIKey       # Fetch your own OpenWeather API Key from their website
+  coordinates: # Valencia!
+    latitude: 39.47
+    longitude: -0.376
