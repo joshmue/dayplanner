@@ -1,10 +1,8 @@
-<div id="top"></div>
 <div align="center">
-  <a style="font-size: 5em" href="https://github.com/joshmue/dayplanner">
+  <h1 href="https://github.com/joshmue/dayplanner">
     📅
-  </a>
-
-<h3 align="center">Dayplanner</h3>
+  </h1>
+  <h3 align="center">Dayplanner</h3>
   <p align="center">
     View your upcoming appointments on an ePaper display!
   </p>
