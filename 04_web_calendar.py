@@ -32,8 +32,8 @@ def f(i):
 # LAYOUT
 ###
 headlinefont = ImageFont.truetype("/usr/share/fonts/google-roboto/Roboto-Bold.ttf", f(28))
-red_draw.text((f(235), f(16)), "Heute".upper(), font=headlinefont)
-red_draw.text((f(455), f(16)), "Morgen".upper(), font=headlinefont)
+red_draw.text((f(235), f(16)), "Today".upper(), font=headlinefont)
+red_draw.text((f(455), f(16)), "Tomorrow".upper(), font=headlinefont)
 check_o = "\uf096"
 check = "\uf046"
 del headlinefont
