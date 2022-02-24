@@ -65,8 +65,6 @@ class SortableEvent:
             return arrow.get(self.ics_event.decoded("DTSTART")) < arrow.get(other.ics_event.decoded("DTSTART"))
         else:
             return True
-    def __gt__(self, other):
-        return lt(self, other)
 
 
 def draw_events(x, cal, delta):
