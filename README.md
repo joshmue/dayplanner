@@ -22,6 +22,11 @@ I let my display refresh every night, so events are updated daily.
 
 See the `config-example.yaml` file on how to configure it.
 
+Possible ICS sources:
+* your existing Google Calendar
+* local garbage collection organisations publishing garbage collection schedules
+* Doodle ICS
+
 ### Built With
 
 * Python libraries: Pillow, ics, icalendar, recurring-ical-events, requests, pyyaml
