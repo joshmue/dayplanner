@@ -5,6 +5,9 @@ calendars:
 - url: https://127.0.0.1/calendar.ics # Fetch ICS URL from your calendar service and put it here
   name: personal                      # Some name to identify calendar
   icon: !!binary "74u1"               # FontAwesome character used as icon for events
+                                      # Result of e. g. base64.b64encode(chr(0xf7c9).encode())
+                                      # where f7c9 is the unicode code for the desired logo.
+                                      # Documented in e. g. font awesome docs.
   trimPrefix: ''                      # Trim this prefix from every event title
 openWeather:
   apiKey: yourOpenWeatherAPIKey       # Fetch your own OpenWeather API Key from their website
