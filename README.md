@@ -1,12 +1,14 @@
 <div align="center">
   <h1 href="https://github.com/joshmue/dayplanner">
-    ![Rendering](./imgs/render.png)
+    📅
   </h1>
   <h3 align="center">Dayplanner</h3>
   <p align="center">
     View your upcoming appointments on an ePaper display!
   </p>
 </div>
+
+![Kind of looks like this](./imgs/render.png)
 
 ## About The Project
 
