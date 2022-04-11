@@ -1,6 +1,6 @@
 <div align="center">
   <h1 href="https://github.com/joshmue/dayplanner">
-    📅
+    ![Rendering](./imgs/render.png)
   </h1>
   <h3 align="center">Dayplanner</h3>
   <p align="center">
@@ -32,4 +32,4 @@ Possible ICS sources:
 * Python libraries: Pillow, ics, icalendar, recurring-ical-events, requests, pyyaml
 * Icons: FontAwesome etc.
 * Weather data: OpenWeather
-* Hardware (and software examples): [Waveshare](https://www.waveshare.com/), Raspberry Pi
+* Hardware (and software examples): [Waveshare](https://www.waveshare.com/) 7.5inch e-Paper V1, Raspberry Pi
