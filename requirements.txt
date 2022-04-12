@@ -1,0 +1,14 @@
+arrow==0.14.7
+certifi==2021.10.8
+charset-normalizer==2.0.12
+icalendar==4.0.9
+ics==0.7
+idna==3.3
+Pillow==9.1.0
+python-dateutil==2.8.2
+pytz==2022.1
+PyYAML==6.0
+recurring-ical-events==1.0.2b0
+requests==2.27.1
+six==1.16.0
+urllib3==1.26.9
