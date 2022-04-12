@@ -18,7 +18,8 @@
 * events from any downloadable ICS calendar (e. g. Google Calendar)
 * the general weather forecast for your exact location
 
-on a bitmap which may be displayed on an ePaper display.
+on a bitmap which may be displayed on an ePaper display (actually two bitmaps,
+one for red pixels and one for black pixels).
 
 I let my display refresh every night, so events are updated daily.
 
