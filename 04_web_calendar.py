@@ -40,7 +40,7 @@ del headlinefont
 
 itemfont = ImageFont.truetype("/usr/share/fonts/google-roboto/Roboto-Bold.ttf", f(24))
 timefont = ImageFont.truetype("/usr/share/fonts/google-roboto/Roboto-Thin.ttf", f(16))
-fontawesome = ImageFont.truetype("/opt/fontawesome-free-5.15.2-desktop/otfs/Font Awesome 5 Free-Solid-900.otf", f(45))
+fontawesome = ImageFont.truetype("/opt/fontawesome-free-6.5.2-desktop/otfs/Font Awesome 6 Free-Solid-900.otf", f(45))
 black_draw.line((f(200), 0, f(200), black_img.size[1]))
 black_draw.line((f(200), f(48), black_img.size[0], f(48)))
 black_draw.line((f(200), f(305), black_img.size[0], f(305)))

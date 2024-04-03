@@ -25,9 +25,9 @@ weather = resp.json()
 weather_today = weather['daily'][0]
 weather_tomorrow = weather['daily'][1]
 
-fontawesome = ImageFont.truetype("/opt/fontawesome-free-5.15.2-desktop/otfs/Font Awesome 5 Free-Solid-900.otf", f(60))
-fontawesome_small = ImageFont.truetype("/opt/fontawesome-free-5.15.2-desktop/otfs/Font Awesome 5 Free-Solid-900.otf", f(32))
-temp_font = ImageFont.truetype("/usr/share/fonts/opentype/firacode/FiraCode-Bold.otf", f(32))
+fontawesome = ImageFont.truetype("/opt/fontawesome-free-6.5.2-desktop/otfs/Font Awesome 6 Free-Solid-900.otf", f(60))
+fontawesome_small = ImageFont.truetype("/opt/fontawesome-free-6.5.2-desktop/otfs/Font Awesome 6 Free-Solid-900.otf", f(32))
+temp_font = ImageFont.truetype("/usr/share/fonts/opentype/firacode/FiraCode-Bold.ttf", f(32))
 
 def get_fa_icon(condition_id):
     if condition_id > 800:

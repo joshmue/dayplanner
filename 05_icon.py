@@ -20,7 +20,7 @@ factor = 1
 def f(i):
     return int(factor * i)
 
-fontawesome = ImageFont.truetype("/opt/fontawesome-free-5.15.2-desktop/otfs/Font Awesome 5 Free-Solid-900.otf", f(160))
+fontawesome = ImageFont.truetype("/opt/fontawesome-free-6.5.2-desktop/otfs/Font Awesome 6 Free-Solid-900.otf", f(160))
 niceicon = random.choice([
     "\uf786", # fa-candy-cane
     "\uf1e3", # fa-football

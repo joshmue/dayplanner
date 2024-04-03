@@ -22,7 +22,7 @@ def f(i):
 ###
 
 dow_short = calendar.day_name[today.weekday()][:3].upper()
-dayupfont = ImageFont.truetype("/usr/share/fonts/opentype/firacode/FiraCode-Bold.otf", f(44))
+dayupfont = ImageFont.truetype("/usr/share/fonts/truetype/firacode/FiraCode-Bold.ttf", f(44))
 red_draw.text((f(10), f(10)), dow_short[0], font=dayupfont)
 red_draw.text((f(10), f(60)), dow_short[1], font=dayupfont)
 red_draw.text((f(10), f(110)), dow_short[2], font=dayupfont)
