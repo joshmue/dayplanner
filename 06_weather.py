@@ -13,7 +13,7 @@ def f(i):
 
 config = yaml.load(open('config.yaml'), yaml.Loader)['openWeather']
 
-resp = requests.get('https://api.openweathermap.org/data/2.5/onecall', params={
+resp = requests.get('https://api.openweathermap.org/data/3.0/onecall', params={
     'appid': config['apiKey'],
     'lat': config['coordinates']['latitude'],
     'lon': config['coordinates']['longitude'],
