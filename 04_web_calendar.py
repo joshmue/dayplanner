@@ -10,6 +10,7 @@ from urllib3.util.retry import Retry
 from requests.adapters import HTTPAdapter
 import yaml
 import pytz
+from common import *
 
 locale.setlocale(locale.LC_ALL, "")
 
@@ -23,24 +24,19 @@ red_draw = ImageDraw.Draw(red_img)
 
 today = datetime.date.today()
 
-factor = 1.0
-
-def f(i):
-    return int(factor * i)
-
 ###
 # LAYOUT
 ###
-headlinefont = ImageFont.truetype("/usr/share/fonts/google-roboto/Roboto-Bold.ttf", f(28))
+headlinefont = ImageFont.truetype(find_font('Roboto:style=Bold'), f(28))
 red_draw.text((f(235), f(16)), "Today".upper(), font=headlinefont)
 red_draw.text((f(455), f(16)), "Tomorrow".upper(), font=headlinefont)
 check_o = "\uf096"
 check = "\uf046"
 del headlinefont
 
-itemfont = ImageFont.truetype("/usr/share/fonts/google-roboto/Roboto-Bold.ttf", f(24))
-timefont = ImageFont.truetype("/usr/share/fonts/google-roboto/Roboto-Thin.ttf", f(16))
-fontawesome = ImageFont.truetype("/opt/fontawesome-free-6.5.2-desktop/otfs/Font Awesome 6 Free-Solid-900.otf", f(45))
+itemfont = ImageFont.truetype(find_font('Roboto:style=Bold'), f(24))
+timefont = ImageFont.truetype(find_font('Roboto:style=Bold'), f(16))
+fontawesome = ImageFont.truetype(find_font('Font Awesome 6 Free Solid:style=Solid'), f(45))
 black_draw.line((f(200), 0, f(200), black_img.size[1]))
 black_draw.line((f(200), f(48), black_img.size[0], f(48)))
 black_draw.line((f(200), f(305), black_img.size[0], f(305)))
@@ -96,11 +92,11 @@ def draw_events(x, cal, delta):
             timestr = start.astimezone(local).strftime("%H:%M")
         else:
             timestr = "9 to 5"
-        iconstartx = x + ((f(50) - fontawesome.getsize(icon)[0]) // 2)
+        iconstartx = x + ((f(50) - fontawesome.getlength(icon)) // 2)
         black_draw.text((iconstartx, f(60 + 64 * i)), icon, font=fontawesome)
         description = ''
         for char in trim_prefix(str(comp.ics_event["SUMMARY"]), comp.ics_event["PREFIX"]):
-            if itemfont.getsize(description + char + "…")[0] <= f(220-65):
+            if itemfont.getlength(description + char + "…") <= f(220-65):
                 description += char
             else:
                 description = description + "…"

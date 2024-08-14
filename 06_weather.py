@@ -1,15 +1,11 @@
 from PIL import Image, ImageDraw, ImageFont
 import requests, yaml
+from common import *
 
 black_img = Image.open("pics/black.bmp")
 black_img.load()
 
 black_draw = ImageDraw.Draw(black_img)
-
-factor = 1
-
-def f(i):
-    return int(factor * i)
 
 config = yaml.load(open('config.yaml'), yaml.Loader)['openWeather']
 
@@ -25,9 +21,10 @@ weather = resp.json()
 weather_today = weather['daily'][0]
 weather_tomorrow = weather['daily'][1]
 
-fontawesome = ImageFont.truetype("/opt/fontawesome-free-6.5.2-desktop/otfs/Font Awesome 6 Free-Solid-900.otf", f(60))
-fontawesome_small = ImageFont.truetype("/opt/fontawesome-free-6.5.2-desktop/otfs/Font Awesome 6 Free-Solid-900.otf", f(32))
-temp_font = ImageFont.truetype("/usr/share/fonts/opentype/firacode/FiraCode-Bold.ttf", f(32))
+fontawesome = ImageFont.truetype(find_font('Font Awesome 6 Free Solid:style=Solid'), f(60))
+fontawesome_small = ImageFont.truetype(find_font('Font Awesome 6 Free Solid:style=Solid'), f(32))
+temp_font = ImageFont.truetype(find_font("FiraCode"), f(32))
+temp_font.set_variation_by_name("Bold")
 
 def get_fa_icon(condition_id):
     if condition_id > 800:
@@ -52,7 +49,7 @@ def draw_weather(x, weather):
     # Icon
     icon = get_fa_icon(weather['weather'][0]['id'])
     print(repr(icon))
-    iconstartx = f(x) + ((f(75) - fontawesome.getsize(icon)[0]) // 2)
+    iconstartx = f(x) + ((f(75) - fontawesome.getlength(icon)) // 2)
     black_draw.text((iconstartx, f(315)), icon, font=fontawesome)
     # Up-down icons
     black_draw.text((f(x + 175), f(310)), "\uf062", font=fontawesome_small)

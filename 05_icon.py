@@ -2,6 +2,7 @@ from PIL import Image, ImageDraw, ImageFont
 import datetime
 import locale
 import random
+from common import *
 
 locale.setlocale(locale.LC_ALL, "")
 
@@ -15,12 +16,7 @@ red_draw = ImageDraw.Draw(red_img)
 
 today = datetime.date.today()
 
-factor = 1
-
-def f(i):
-    return int(factor * i)
-
-fontawesome = ImageFont.truetype("/opt/fontawesome-free-6.5.2-desktop/otfs/Font Awesome 6 Free-Solid-900.otf", f(160))
+fontawesome = ImageFont.truetype(find_font('Font Awesome 6 Free Solid:style=Solid'), f(160))
 niceicon = random.choice([
     "\uf786", # fa-candy-cane
     "\uf1e3", # fa-football
@@ -39,7 +35,7 @@ niceicon = random.choice([
     "\uf12b", # fa-superscript
 ])
 print("Picked", repr(niceicon))
-startx = (200 - fontawesome.getsize(niceicon)[0]) // 2
+startx = (200 - fontawesome.getlength(niceicon)) // 2
 black_draw.text((f(startx), f(200)), niceicon, font=fontawesome)
 
 # Save to file

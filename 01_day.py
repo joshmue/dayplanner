@@ -1,8 +1,7 @@
 from PIL import Image, ImageDraw, ImageFont
 import datetime
-import calendar
 import locale
-import random
+from common import *
 
 locale.setlocale(locale.LC_ALL, "")
 
@@ -14,15 +13,10 @@ red_draw = ImageDraw.Draw(red_img)
 
 today = datetime.date.today()
 
-factor = 1
-
-def f(i):
-    return int(factor * i)
-
 ###
 # CALENDAR
 ###
-dayfont = ImageFont.truetype("/usr/share/fonts/google-roboto/Roboto-Bold.ttf", f(120))
+dayfont = ImageFont.truetype(find_font('Roboto:style=Bold'), f(120))
 red_draw.text((f(50), f(-2)), str(today.day).zfill(2), font=dayfont)
 
 # Save to file
