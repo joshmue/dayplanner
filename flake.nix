@@ -1,5 +1,5 @@
 {
-  description = "A very basic flake";
+  description = "Dayplanner";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
@@ -17,8 +17,14 @@
         ];});
       in
       {
-        packages.default = pkgs.mkShell {
+        packages.default = pkgs.stdenv.mkDerivation {
           name = "dayplanner";
+          src = self;
+          env = {
+            FONTCONFIG_FILE = fontsdotconf;
+          };
+          buildPhase = "true";
+          installPhase = "mkdir -p $out/app; install -t $out/app *.py";
           buildInputs = [
             (pkgs.python3.withPackages(ppkgs: [
               ppkgs.recurring-ical-events
@@ -29,9 +35,6 @@
               ppkgs.requests
             ]))
           ];
-          shellHook = ''
-            export FONTCONFIG_FILE=${fontsdotconf}
-          '';
         };
       });
 }
