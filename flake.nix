@@ -24,7 +24,7 @@
             FONTCONFIG_FILE = fontsdotconf;
           };
           buildPhase = "true";
-          installPhase = "mkdir -p $out/app; install -t $out/app *.py";
+          installPhase = "mkdir -p $out/app; install -t $out/app src/**/*.py; ";
           buildInputs = [
             (pkgs.python3.withPackages(ppkgs: [
               ppkgs.recurring-ical-events

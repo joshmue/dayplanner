@@ -9,8 +9,3 @@ def find_font(fontname):
     )
     print(res.stdout)
     return str(res.stdout)
-
-factor = 1
-
-def f(i):
-    return int(factor * i)
